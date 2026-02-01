@@ -67,7 +67,11 @@ fi
 
 echo "Installing frontend dependencies..."
 cd "$APP_DIR/frontend"
-npm ci
+if [[ -f package-lock.json ]]; then
+  npm ci
+else
+  npm install
+fi
 
 echo "Building frontend..."
 set -a
