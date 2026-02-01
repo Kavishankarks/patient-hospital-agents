@@ -54,6 +54,11 @@ This repository includes a FastAPI backend and a Next.js frontend UI.
    ```
 4. Open the UI: `http://localhost:3000`
 
+## Endpoints
+
+- **Swagger UI**: `http://localhost:8000/docs#/`
+- **Web UI**: `http://localhost:3000/`
+
 ## Configuration
 
 - **Backend uploads directory**: `backend/app/core/config.py` → `UPLOAD_DIR`
