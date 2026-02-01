@@ -1,5 +1,35 @@
 # Patient & Hospital Copilot Backend
 
+## Architecture (High-level)
+```
+Clients (Web/Mobile)
+        |
+        v
+ FastAPI API Layer
+ (routers, schemas)
+        |
+        v
+ Orchestration Layer
+ (pipelines + tracing)
+        |
+        +---------------------------+
+        |                           |
+        v                           v
+ LLM Agents                    Services
+ (Profiler, Summary,            (Ingestion, MCP,
+  Triage, Coach, etc.)           Med Tracker, TTS)
+        |                           |
+        +-------------+-------------+
+                      v
+               Data Layer (DB)
+        (patients, profiles, triage,
+         meds, coach messages, audit)
+                      |
+                      v
+           External Integrations
+   (OpenAI APIs, Hospital MCP, OCR)
+```
+
 ## Environment variables
 - OPENAI_API_KEY
 - OPENAI_MODEL_TEXT
@@ -69,3 +99,21 @@ Create an Alembic setup inside `backend/app/db/migrations` if you want generated
 
 ## Mock MCP Hospital server
 Create a small FastAPI app with `/search` and `/capabilities/{hospital_id}` endpoints returning JSON.
+
+## Project Structure (for contributors)
+```
+backend/
+  app/
+    main.py                # FastAPI app + middleware + startup
+    core/                  # config, logging, security, exceptions
+    api/                   # routers + versioned endpoints
+    db/                    # engine, sessions, migrations
+    models/                # SQLAlchemy ORM models
+    schemas/               # Pydantic v2 request/response models
+    services/              # non-LLM services (MCP, OCR, TTS, etc.)
+    agents/                # LLM-backed agents
+    orchestration/         # pipelines + tracing
+    utils/                 # helpers (masking, time, files, safety)
+  tests/                   # unit tests
+  docker/                  # container assets
+```

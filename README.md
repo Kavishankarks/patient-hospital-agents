@@ -59,6 +59,23 @@ This repository includes a FastAPI backend and a Next.js frontend UI.
 - **Backend uploads directory**: `backend/app/core/config.py` → `UPLOAD_DIR`
 - **Frontend API base**: Set in the UI or via `NEXT_PUBLIC_API_BASE`
 
+## Required API keys
+
+Create a `.env` file in `backend/` (or export env vars) with the following:
+
+```bash
+OPENAI_API_KEY=your_openai_api_key
+```
+
+Optional overrides:
+
+```bash
+OPENAI_MODEL_TEXT=gpt-4.1-mini
+OPENAI_MODEL_TTS=gpt-4o-mini-tts
+OPENAI_MODEL_STT=whisper-1
+MCP_HOSPITAL_BASE_URL=http://localhost:9001
+```
+
 ## Notes
 
 - This tool is for clinical decision support only and does not replace a
