@@ -1,0 +1,43 @@
+.DS_Store
+.env
+.env.*
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+ENV/
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploads / generated
+backend/data/
+backend/data/uploads/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Node (if UI is added)
+node_modules/
+.next/
+out/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+/frontend
+/frontend/.next/cache
+/frontend/.next/cache/webpack

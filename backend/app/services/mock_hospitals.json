@@ -1,0 +1,32 @@
+{
+  "hospitals": [
+    {
+      "id": "H1",
+      "name": "City General",
+      "specialties": [
+        "cardiology",
+        "emergency"
+      ],
+      "trauma_level": 1,
+      "eta_min": 12
+    },
+    {
+      "id": "H2",
+      "name": "Lakeside Medical",
+      "specialties": [
+        "orthopedics"
+      ],
+      "trauma_level": 0,
+      "eta_min": 8
+    },
+    {
+      "id": "H3",
+      "name": "Valley Hospital",
+      "specialties": [
+        "neurology"
+      ],
+      "trauma_level": 2,
+      "eta_min": 20
+    }
+  ]
+}

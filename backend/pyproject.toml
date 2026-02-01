@@ -1,0 +1,25 @@
+[project]
+name = "patient-hospital-copilot"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "sqlalchemy",
+  "aiosqlite",
+  "pydantic",
+  "pydantic-settings",
+  "httpx",
+  "requests",
+  "openai",
+  "pytest",
+  "greenlet",
+  "python-multipart",
+  "Pillow",
+  "PyMuPDF",
+  "requests",
+  "fitz"
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["backend"]
