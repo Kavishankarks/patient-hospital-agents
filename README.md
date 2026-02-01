@@ -65,6 +65,8 @@ Create a `.env` file in `backend/` (or export env vars) with the following:
 
 ```bash
 OPENAI_API_KEY=your_openai_api_key
+NVIDIA_NIM_API_KEY=your_nvidia_nim_api_key
+NVIDIA_NIM_PAGE_ELEMENTS_URL=https://ai.api.nvidia.com/v1/cv/nvidia/nemoretriever-ocr-v1
 ```
 
 Optional overrides:
@@ -80,3 +82,8 @@ MCP_HOSPITAL_BASE_URL=http://localhost:9001
 
 - This tool is for clinical decision support only and does not replace a
   licensed clinician.
+
+## Acknowledgements
+The project is solely built using all OpenAI Tech 
+- ChatGPT
+- Codex
