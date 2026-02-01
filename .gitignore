@@ -38,6 +38,5 @@ out/
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
-/frontend
 /frontend/.next/cache
 /frontend/.next/cache/webpack
