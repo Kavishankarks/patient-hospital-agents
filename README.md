@@ -4,6 +4,8 @@ Clinical decision support platform that helps care teams and patients manage
 intake, triage, summaries, hospital recommendations, and recovery coaching.
 This repository includes a FastAPI backend and a Next.js frontend UI.
 
+![img.png](img.png)
+
 ## What this project includes
 
 - **Backend (FastAPI)**: Patient records, document/audio ingestion, profiling,
